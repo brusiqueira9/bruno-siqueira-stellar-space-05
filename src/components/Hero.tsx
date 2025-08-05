@@ -28,13 +28,12 @@ const Hero = () => {
                 <p className="text-accent font-medium tracking-wide uppercase text-sm">
                   Analista de TI | Arquiteto de Software em Formação
                 </p>
-                <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center gap-4">
+                <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center">
                   <img 
                     src="/src/assets/logo.png" 
                     alt="Bruno Logo" 
-                    className="w-20 h-20 lg:w-32 lg:h-32 object-contain"
+                    className="w-24 h-24 lg:w-40 lg:h-40 object-contain"
                   />
-                  <span className="text-foreground">Bruno</span>
                 </h1>
               </div>
 
