@@ -14,11 +14,21 @@ const Navbar = () => {
       
       // Update active section based on scroll position
       const sections = ['home', 'about', 'skills', 'projects', 'curriculum', 'contact'];
+      
+      // Check if we're near the bottom of the page (contact section)
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      if (scrollPosition >= documentHeight - 100) {
+        setActiveSection('contact');
+        return;
+      }
+      
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= 150 && rect.bottom >= 150;
         }
         return false;
       });
