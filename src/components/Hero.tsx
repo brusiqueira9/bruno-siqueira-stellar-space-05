@@ -33,7 +33,7 @@ const Hero = () => {
                   <img 
                     src={logoImage} 
                     alt="Bruno Logo" 
-                    className="w-24 h-24 lg:w-40 lg:h-40 object-contain"
+                    className="w-24 h-24 lg:w-40 lg:h-40 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
                   />
                 </h1>
               </div>
