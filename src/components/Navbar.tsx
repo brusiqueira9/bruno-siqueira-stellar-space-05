@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Sparkles, Zap } from 'lucide-react';
+import logoImage from '@/assets/logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,7 @@ const Navbar = () => {
             <div className="relative group">
               <div className="w-12 h-12 holographic-display rounded-full flex items-center justify-center border-2 border-neon-cyan/40 transition-all duration-500 group-hover:scale-110 overflow-hidden">
                 <img 
-                  src="/src/assets/logo.png" 
+                  src={logoImage} 
                   alt="Bruno Siqueira Logo" 
                   className="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-300"
                 />

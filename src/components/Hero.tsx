@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Cloud } from 'lucide-react';
+import logoImage from '@/assets/logo.png';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -30,7 +31,7 @@ const Hero = () => {
                 </p>
                 <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center">
                   <img 
-                    src="/src/assets/logo.png" 
+                    src={logoImage} 
                     alt="Bruno Logo" 
                     className="w-24 h-24 lg:w-40 lg:h-40 object-contain"
                   />
