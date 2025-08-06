@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Sparkles, Zap } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
@@ -52,7 +51,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'INÍCIO', id: 'home', icon: '◉' },
     { name: 'SOBRE', id: 'about', icon: '◈' },
-    { name: 'HABILIDADES', id: 'skills', icon: '◊' },
+    { name: 'HABILIDADES', id: 'skills', icon: '◊' }, // <-- Corrigido aqui
     { name: 'PROJETOS', id: 'projects', icon: '◇' },
     { name: 'EXPERIÊNCIA', id: 'curriculum', icon: '◌' },
     { name: 'CONTATO', id: 'contact', icon: '◎' }

@@ -83,7 +83,7 @@ const Experience = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">BRUNO GABRIEL</h3>
+                    <h3 className="text-lg font-bold text-foreground mb-1">BRUNO GABRIEL SIQUEIRA</h3>
                     <p className="text-accent font-medium text-sm mb-3">Analista de TI | Arquiteto de Software</p>
                     <p className="text-muted-foreground text-xs leading-relaxed">
                       Especialista em soluções técnicas, automação e modernização de infraestrutura.
@@ -97,7 +97,7 @@ const Experience = () => {
                     </div>
                     <div className="flex items-center justify-center gap-2 text-muted-foreground">
                       <Calendar className="w-3 h-3 text-primary" />
-                      <span>Nascido em 1999</span>
+                      <span>Nascido em 1998</span>
                     </div>
                   </div>
                 </div>

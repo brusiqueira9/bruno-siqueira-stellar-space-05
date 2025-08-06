@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Cloud } from 'lucide-react';
-import logoImage from '@/assets/logo.png';
+import logoImage from '@/assets/logo2.png';
+import StellarBackground from './StellarBackground';
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -14,11 +15,19 @@ const Hero = () => {
         setCurrentIndex(currentIndex + 1);
       }, 50);
       return () => clearTimeout(timeout);
+    } else {
+      // Aguarda um tempo e reinicia o efeito
+      const resetTimeout = setTimeout(() => {
+        setDisplayText('');
+        setCurrentIndex(0);
+      }, 1500); // tempo de pausa após terminar
+      return () => clearTimeout(resetTimeout);
     }
   }, [currentIndex, fullText]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
+      <StellarBackground />
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -33,7 +42,7 @@ const Hero = () => {
                   <img 
                     src={logoImage} 
                     alt="Bruno Logo" 
-                    className="w-24 h-24 lg:w-40 lg:h-40 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
+                    className="w-24 h-24 lg:w-40 lg:h-40 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
                   />
                 </h1>
               </div>
