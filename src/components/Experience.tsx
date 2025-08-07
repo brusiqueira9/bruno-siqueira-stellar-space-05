@@ -62,7 +62,7 @@ const Experience = () => {
             Meu <span className="gradient-text">Currículo</span>
           </h2>
           <a
-            href="/src/assets/Curriculum Bruno.pdf"
+            href="/assets/Curriculum Bruno.pdf"
             download="Curriculum Bruno.pdf"
             className="btn-primary inline-flex items-center gap-2 mx-auto mt-4"
             style={{ minWidth: 180, justifyContent: 'center' }}
