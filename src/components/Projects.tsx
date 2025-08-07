@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: 'Site Institucional AgroCP',
       description: 'Site institucional responsivo da AgroCP, com páginas de produtos, história e sustentabilidade, além de formulário de contato integrado e armazenamento no Firebase.',
-      image: '/src/assets/projects/siteagrocp.png',
+      image: '/assets/projects/siteagrocp.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Firebase'],
       demo: 'https://agrocp.agr.br/',
       github: '#',
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: 'Expense Guru - Controle Financeiro',
       description: 'Aplicação web para controle financeiro pessoal com dashboard interativo, gestão de receitas, despesas e metas, usando Supabase e interface responsiva.',
-      image: '/src/assets/projects/expenseguru.png',
+      image: '/assets/projects/expenseguru.png',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Shadcn/UI'],
       demo: 'https://guruexpense.netlify.app/',
       github: 'https://github.com/brusiqueira9/expense-guru-supabase',
@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: 'App Chama Motorista',
       description: 'Sistema web logístico para anunciar motoristas via voz com nome, placa e tipo de operação, armazenando chamados recentes no navegador para reuso rápido.',
-      image: '/src/assets/projects/chamamotorista.png',
+      image: '/assets/projects/chamamotorista.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'Web Speech API', 'LocalStorage'],
       demo: 'https://chamamotorista.netlify.app/',
       github: 'https://github.com/brusiqueira9/chamada_motorista',
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: 'Orion Monitor',
       description: 'Sistema para monitoramento contínuo de dispositivos e impressoras com alertas por e-mail, logs, agendamentos e notificações em tempo real, desenvolvido para a AgroCP Filial.',
-      image: '/src/assets/projects/monitoramentoderede.png',
+      image: '/assets/projects/monitoramentoderede.png',
       tech: ['Node.js', 'Express', 'Sequelize', 'Socket.io', 'JWT', 'Docker'],
       demo: '',
       github: '',
@@ -54,7 +54,7 @@ const Projects = () => {
     {
       title: 'Ficha de reserva de hotel',
       description: 'Sistema para padronizar reservas de hotel com geração automática de PDFs personalizados com a marca AgroCP, facilitando a comunicação com hotéis parceiros.',
-      image: '/src/assets/projects/fichareservahotel.png',
+      image: '/assets/projects/fichareservahotel.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'jsPDF'],
       demo: 'https://ficha-reserva-hotel.netlify.app/',
       github: 'https://github.com/brusiqueira9/ficha-reserva-hotel',
@@ -66,7 +66,7 @@ const Projects = () => {
     {
       title: 'IAC - Automação de Gerenciamento de Usuários e Diretórios no Linux',
       description: 'Script Bash para automatizar a criação de usuários, grupos e diretórios no Linux, com permissões e senhas definidas, facilitando a administração do sistema.',
-      image: '/src/assets/projects/IAClinux.png',
+      image: '/assets/projects/IAClinux.png',
       tech: ['Bash', 'Shell Script', 'Linux'],
       demo: '',
       github: 'https://github.com/brusiqueira9/linux-projeto1-iac',
@@ -78,7 +78,7 @@ const Projects = () => {
     {
       title: 'Hub de Sistemas Integrados AgroCP',
       description: 'Portal corporativo da AgroCP que centraliza o acesso a diversos sistemas internos, como gestão logística, controle de TI e logs de acesso, com autenticação por permissão e layout responsivo.',
-      image: '/src/assets/projects/hubagrocp.png',
+      image: '/assets/projects/hubagrocp.png',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'MySQL', 'Docker', 'JWT', 'Vite'],
       demo: '',
       github: '',
@@ -90,7 +90,7 @@ const Projects = () => {
     {
       title: 'Vínculo Item Tablet',
       description: 'Aplicação web que realiza a vinculação entre os produtos dos pedidos emitidos no SIG e os cadastros corretos no ERP Siagri, por meio de API conectada ao banco Oracle.',
-      image: '/src/assets/projects/vinculo-tablet.png',
+      image: '/assets/projects/vinculo-tablet.png',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'OracleDB', 'Axios', 'Docker'],
       demo: '',
       github: '',
@@ -102,7 +102,7 @@ const Projects = () => {
     {
       title: 'Status Pedido',
       description: 'Sistema web leve que consulta em tempo real o status dos pedidos registrados via tablet, acessando dados do banco SIG através de API REST.',
-      image: '/src/assets/projects/statuspedido.png',
+      image: '/assets/projects/statuspedido.png',
       tech: ['Node.js', 'Express', 'JavaScript', 'HTML', 'CSS', 'SQL', 'REST API'],
       demo: '',
       github: '',
@@ -114,7 +114,7 @@ const Projects = () => {
     {
       title: 'Processador de Planilhas',
       description: 'Ferramenta de automação que remove duplicidades entre CT-es e Notas Fiscais em planilhas Excel, devolvendo o arquivo corrigido com um clique.',
-      image: '/src/assets/projects/planilhas.png',
+      image: '/assets/projects/planilhas.png',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'ExcelJS', 'XLSX', 'FileReader API'],
       demo: '',
       github: '',
