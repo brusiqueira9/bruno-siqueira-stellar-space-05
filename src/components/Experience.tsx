@@ -1,4 +1,3 @@
-
 import { Download, Calendar, MapPin, Briefcase, GraduationCap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -62,10 +61,15 @@ const Experience = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Meu <span className="gradient-text">Currículo</span>
           </h2>
-          <button className="btn-primary flex items-center gap-2 mx-auto">
+          <a
+            href="/src/assets/Curriculum Bruno.pdf"
+            download="Curriculum Bruno.pdf"
+            className="btn-primary inline-flex items-center gap-2 mx-auto mt-4"
+            style={{ minWidth: 180, justifyContent: 'center' }}
+          >
             <Download className="w-4 h-4" />
             Download CV
-          </button>
+          </a>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">

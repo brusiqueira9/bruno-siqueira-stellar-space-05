@@ -138,7 +138,18 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-6 h-6 text-muted-foreground" />
+        <ChevronDown
+          className="
+            w-12 h-12
+            text-primary
+            animate-bounce
+            drop-shadow-[0_0_16px_#00b0ff]
+            transition-all duration-300
+          "
+          style={{
+            filter: 'drop-shadow(0 0 16px #00b0ff)',
+          }}
+        />
       </div>
     </section>
   );

@@ -91,6 +91,20 @@
   }
 }
 
+@keyframes spin-slow {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes pulse-drop-shadow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px #00b0ff80);
+  }
+  50% {
+    filter: drop-shadow(0 0 40px #00b0ffcc) drop-shadow(0 0 80px #00b0ff44);
+  }
+}
+
 @layer components {
   .surface-card {
     @apply backdrop-blur-xl border border-white/10 rounded-2xl;
@@ -139,6 +153,18 @@
     border-color: hsl(var(--accent) / 0.4);
     transform: translateY(-1px);
   }
+
+  .animate-spin-slow {
+    animation: spin-slow 1.8s linear infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 1.2s infinite;
+  }
+
+  .animate-pulse-drop {
+    animation: pulse-drop-shadow 1.2s infinite;
+  }
 }
 
 /* Scroll Animation for Tech Stack */
@@ -154,5 +180,29 @@
 .mask-gradient {
   mask: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%);
   -webkit-mask: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%);
+}
+
+/* Neon Scrollbar - para navegadores baseados em Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #00b0ff 40%, #0ff 100%);
+  border-radius: 8px;
+  box-shadow: 0 0 12px 2px #00b0ff80;
+  border: 2px solid #222;
+}
+
+::-webkit-scrollbar-track {
+  background: #18181b;
+  border-radius: 8px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #00b0ff #18181b;
 }
 
