@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import StellarBackground from "./components/StellarBackground";
 import Loader from "@/components/Loader";
 
 const queryClient = new QueryClient();
@@ -30,7 +29,6 @@ function App() {
           <Toaster />
           <Sonner />
           <div className="relative min-h-screen bg-background">
-            <StellarBackground />
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Index />} />

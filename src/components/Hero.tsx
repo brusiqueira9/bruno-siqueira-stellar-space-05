@@ -28,11 +28,11 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
       <StellarBackground />
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Side - Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 relative z-10">
             <div className="space-y-6">
               <div className="space-y-2">
                 <p className="text-accent font-medium tracking-wide uppercase text-sm">
