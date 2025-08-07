@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Portfólio Bruno Siqueira - Stellar Space
 
-## Project info
+## Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/8b77467e-2c56-401b-a04b-5a2cb14480b8
+Este é um site de portfólio profissional para Bruno Siqueira, Analista de TI e Arquiteto de Software em formação. O site apresenta suas habilidades, projetos, experiência profissional e informações de contato em um design moderno com tema espacial/estelar.
 
-## How can I edit this code?
+## Tecnologias Utilizadas
 
-There are several ways of editing your application.
+Este projeto foi construído com as seguintes tecnologias:
 
-**Use Lovable**
+- **React** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset tipado de JavaScript
+- **Vite** - Build tool e dev server rápido
+- **Tailwind CSS** - Framework CSS utilitário
+- **Shadcn/UI** - Componentes de UI reutilizáveis
+- **React Router** - Roteamento para aplicações React
+- **Next-themes** - Suporte a temas claro/escuro
+- **Lucide React** - Biblioteca de ícones
+- **React Query** - Gerenciamento de estado e requisições
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8b77467e-2c56-401b-a04b-5a2cb14480b8) and start prompting.
+## Estrutura do Projeto
 
-Changes made via Lovable will be committed automatically to this repo.
+O projeto está organizado da seguinte forma:
 
-**Use your preferred IDE**
+- `/src/components` - Componentes React reutilizáveis
+  - Componentes principais: Hero, About, Skills, Projects, Experience, Contact
+  - Componentes de UI: baseados em shadcn/ui
+- `/src/pages` - Páginas da aplicação
+- `/src/assets` - Imagens e recursos estáticos
+- `/src/hooks` - Custom hooks React
+- `/src/lib` - Utilitários e funções auxiliares
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Características Principais
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Design Responsivo** - Adaptado para todos os tamanhos de tela
+- **Tema Escuro** - Interface com tema espacial escuro
+- **Animações** - Efeitos visuais e animações para melhor experiência do usuário
+- **Fundo Estelar** - Background animado com estrelas
+- **Seções Organizadas** - Divisão clara entre informações pessoais, habilidades e projetos
 
-Follow these steps:
+## Como Executar o Projeto
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Pré-requisitos
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js e npm instalados - [instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Passos para Execução
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+# Clone o repositório
+git clone <URL_DO_REPOSITÓRIO>
+
+# Entre no diretório do projeto
+cd bruno-siqueira-stellar-space-05
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8b77467e-2c56-401b-a04b-5a2cb14480b8) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
