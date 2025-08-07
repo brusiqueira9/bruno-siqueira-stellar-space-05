@@ -37,9 +37,6 @@ function App() {
               </Routes>
             </BrowserRouter>
           </div>
-          <div className="container mx-auto max-w-screen-xl px-2 sm:px-4 lg:px-8 py-8 lg:py-20">
-            {/* Conteúdo da página */}
-          </div>
         </TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

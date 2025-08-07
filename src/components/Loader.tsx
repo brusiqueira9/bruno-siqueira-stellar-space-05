@@ -1,7 +1,7 @@
 import logoImage from '@/assets/logo.png';
 
 const Loader = () => (
-  <div className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none">
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none bg-background">
     <img
       src={logoImage}
       alt="Carregando..."
