@@ -81,7 +81,7 @@ const StellarBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+      className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-background"
       style={{ position: 'absolute', top: 0, left: 0 }}
     />
   );
