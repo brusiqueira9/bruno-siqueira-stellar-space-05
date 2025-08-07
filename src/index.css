@@ -38,7 +38,7 @@
 
   body {
     @apply bg-background text-foreground font-inter overflow-x-hidden;
-    background: var(--gradient-surface);
+    background: var(--gradient-surface, #18181b); /* Fallback para fundo escuro */
     background-size: 400% 400%;
     animation: gradient-shift 20s ease-in-out infinite;
     min-height: 100vh;
@@ -205,4 +205,3 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #00b0ff #18181b;
 }
-
