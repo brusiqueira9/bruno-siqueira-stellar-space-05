@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 
-const STAR_COUNT = 120;
-const STAR_COLOR = 'rgba(255,255,255,0.85)';
+const STAR_COUNT = 150; // Aumentei a quantidade de estrelas
+const STAR_COLOR = 'rgba(0,176,255,0.85)'; // Mudei para azul neon
 const STAR_MIN_RADIUS = 0.5;
 const STAR_MAX_RADIUS = 1.8;
 
@@ -39,9 +39,9 @@ const StellarBackground = () => {
         const alpha = 0.7 + 0.3 * Math.sin(star.twinkle);
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx.fillStyle = `rgba(0,176,255,${alpha})`; // Azul neon
         ctx.shadowColor = STAR_COLOR;
-        ctx.shadowBlur = 8;
+        ctx.shadowBlur = 12; // Aumentei o brilho
         ctx.fill();
         ctx.closePath();
         ctx.shadowBlur = 0;

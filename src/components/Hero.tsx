@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Cloud } from 'lucide-react';
 import logoImage from '@/assets/logo2.png';
-import StellarBackground from './StellarBackground';
+// Removemos a importação do StellarBackground
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      <StellarBackground />
+      {/* Removemos o StellarBackground daqui */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
