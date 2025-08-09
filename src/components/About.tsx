@@ -46,7 +46,7 @@ const About = () => {
                   Sou <span className="text-foreground font-semibold">Analista de TI</span> com 3 anos de experiência 
                   em desenvolvimento web, suporte técnico e administração de sistemas. Pós-graduado em Arquitetura 
                   de Software e atualmente cursando MBA em Arquitetura de Microsserviços, atuo com soluções escaláveis, 
-                  resilientes e modernos.
+                  resilientes e modernas.
                 </p>
                 <p>
                   Tenho perfil técnico, estratégico e colaborativo, voltado para eficiência, performance e impacto 
