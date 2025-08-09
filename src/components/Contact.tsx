@@ -12,7 +12,7 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/brunosiqueiratec',
+      url: 'https://www.linkedin.com/in/bruno-siqueiratec/',
       color: 'hover:text-blue-400'
     },
     {
