@@ -1,5 +1,6 @@
 import { Github, ExternalLink, Calendar, Star, Code2, Eye, Briefcase } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import SpotlightCard from './SpotlightCard';
 
 const Projects = () => {
   const projects = [
@@ -142,76 +143,77 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Card
-              key={project.title}
-              className="surface-card border border-accent/10 rounded-2xl shadow-md hover:shadow-[0_0_24px_0_rgba(0,176,255,0.35)] transition-all duration-300 group"
-            >
-              <CardContent className="p-0">
-                {/* Imagem sem caixa */}
-                <div className="flex justify-center items-center pt-8 pb-2">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 md:h-40 lg:h-44 xl:h-56 object-contain transition-transform duration-300 group-hover:scale-105"
-                    style={{ background: "transparent" }}
-                  />
-                </div>
-
-                {/* Conteúdo */}
-                <div className="p-6 space-y-5">
-                  <h3 className="text-xl md:text-2xl font-extrabold group-hover:text-primary transition-colors duration-300 leading-tight">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-base leading-relaxed line-clamp-6">
-                    {project.description}
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-xs font-semibold surface-card border border-accent/20 rounded-full shadow-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+            <SpotlightCard key={project.title} className="h-full">
+              <Card
+                className="surface-card border border-accent/10 rounded-2xl shadow-md hover:shadow-[0_0_24px_0_rgba(0,176,255,0.35)] transition-all duration-300 group h-full"
+              >
+                <CardContent className="p-0">
+                  {/* Imagem sem caixa */}
+                  <div className="flex justify-center items-center pt-8 pb-2">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 md:h-40 lg:h-44 xl:h-56 object-contain transition-transform duration-300 group-hover:scale-105"
+                      style={{ background: "transparent" }}
+                    />
                   </div>
 
-                  {/* Botões */}
-                  <div className="flex gap-3 mt-4">
-                    {project.demo && project.demo !== '#' && (
-                      <a
-                        href={project.demo}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-bold border border-primary/20 transition-all duration-200 text-base"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                        Demo
-                      </a>
-                    )}
-                    {project.github && project.github !== '#' && (
-                      <a
-                        href={project.github}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 text-accent font-bold border border-accent/20 transition-all duration-200 text-base"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-5 h-5" />
-                        Código
-                      </a>
-                    )}
-                    {!project.demo && !project.github && (
-                      <span className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground font-bold border border-muted/20 text-base cursor-not-allowed opacity-70">
-                        <Briefcase className="w-5 h-5" />
-                        Projeto Corporativo
-                      </span>
-                    )}
+                  {/* Conteúdo */}
+                  <div className="p-6 space-y-5">
+                    <h3 className="text-xl md:text-2xl font-extrabold group-hover:text-primary transition-colors duration-300 leading-tight">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground text-base leading-relaxed line-clamp-6">
+                      {project.description}
+                    </p>
+
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-xs font-semibold surface-card border border-accent/20 rounded-full shadow-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Botões */}
+                    <div className="flex gap-3 mt-4">
+                      {project.demo && project.demo !== '#' && (
+                        <a
+                          href={project.demo}
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary font-bold border border-primary/20 transition-all duration-200 text-base"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                          Demo
+                        </a>
+                      )}
+                      {project.github && project.github !== '#' && (
+                        <a
+                          href={project.github}
+                          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent/10 hover:bg-accent/20 text-accent font-bold border border-accent/20 transition-all duration-200 text-base"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="w-5 h-5" />
+                          Código
+                        </a>
+                      )}
+                      {!project.demo && !project.github && (
+                        <span className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-muted text-muted-foreground font-bold border border-muted/20 text-base cursor-not-allowed opacity-70">
+                          <Briefcase className="w-5 h-5" />
+                          Projeto Corporativo
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </SpotlightCard>
           ))}
         </div>
       </div>

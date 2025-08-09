@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -94,8 +93,8 @@ export default {
 					'50%': { boxShadow: '0 0 40px rgba(0, 255, 255, 0.6), 0 0 80px rgba(255, 0, 255, 0.3)' }
 				},
 				'typing': {
-					'from': { width: '0' },
-					'to': { width: '100%' }
+					from: { width: '0' },
+					to: { width: '100%' }
 				},
 				'blink': {
 					'50%': { borderColor: 'transparent' }
@@ -141,7 +140,16 @@ export default {
 				'float-fast': {
 					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
 					'50%': { transform: 'translateY(-10px) rotate(3deg)' }
-				}
+				},
+				// Novos keyframes
+				'sparkle-spin': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(180deg)' },
+				},
+				'sparkle-fade': {
+					'0%': { transform: 'scale(0)', opacity: '1' },
+					'100%': { transform: 'scale(1)', opacity: '0' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -157,7 +165,10 @@ export default {
 				'scroll': 'scroll 40s linear infinite',
 				'float-slow': 'float-slow 6s ease-in-out infinite',
 				'float-medium': 'float-medium 4s ease-in-out infinite',
-				'float-fast': 'float-fast 3s ease-in-out infinite'
+				'float-fast': 'float-fast 3s ease-in-out infinite',
+				// Novas animações
+				'sparkle-spin': 'sparkle-spin 1s linear forwards',
+				'sparkle-fade': 'sparkle-fade 1s linear forwards',
 			},
 			fontFamily: {
 				'inter': ['Inter', 'system-ui', 'sans-serif'],

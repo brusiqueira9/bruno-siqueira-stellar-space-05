@@ -1,33 +1,26 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Code, Database, Cloud } from 'lucide-react';
 import logoImage from '@/assets/logo2.png';
-// Removemos a importação do StellarBackground
+import TypewriterEffect from './TypewriterEffect';
+import SparklesText from './SparklesText';
 
 const Hero = () => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const fullText = 'Transformando desafios em soluções escaláveis.';
+  // Remova os estados existentes para o efeito de digitação
+  // const [displayText, setDisplayText] = useState('');
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const fullText = 'Transformando desafios em soluções escaláveis.';
+  
+  // Remova o useEffect para o efeito de digitação
 
-  useEffect(() => {
-    if (currentIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(fullText.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
-      }, 50);
-      return () => clearTimeout(timeout);
-    } else {
-      // Aguarda um tempo e reinicia o efeito
-      const resetTimeout = setTimeout(() => {
-        setDisplayText('');
-        setCurrentIndex(0);
-      }, 1500); // tempo de pausa após terminar
-      return () => clearTimeout(resetTimeout);
-    }
-  }, [currentIndex, fullText]);
+  const typingTexts = [
+    'Transformando desafios em soluções escaláveis.',
+    'Desenvolvendo arquiteturas modernas e resilientes.',
+    'Criando experiências digitais de alto impacto.',
+    'Conectando tecnologia e negócios com eficiência.'
+  ];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      {/* Removemos o StellarBackground daqui */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
@@ -39,20 +32,22 @@ const Hero = () => {
                   Analista de TI | Arquiteto de Software em Formação
                 </p>
                 <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center">
-                  <img 
-                    src={logoImage} 
-                    alt="Bruno Logo" 
-                    className="w-24 h-24 lg:w-40 lg:h-40 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
-                  />
+                  <SparklesText sparkleCount={20}>
+                    <img 
+                      src={logoImage} 
+                      alt="Bruno Logo" 
+                      className="w-24 h-24 lg:w-40 lg:h-40 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
+                    />
+                  </SparklesText>
                 </h1>
               </div>
 
               <div className="space-y-4">
                 <div className="h-12 flex items-center">
-                  <p className="text-xl lg:text-2xl font-medium text-muted-foreground font-mono">
-                    {displayText}
-                    <span className="animate-pulse text-primary ml-1">|</span>
-                  </p>
+                  <TypewriterEffect 
+                    texts={typingTexts}
+                    className="text-xl lg:text-2xl font-medium text-muted-foreground"
+                  />
                 </div>
                 <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
                   Especialista em soluções escaláveis, infraestrutura de TI e modernização de sistemas. 
