@@ -24,23 +24,54 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Side - Text Content */}
-          <div className="space-y-8 relative z-10">
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <p className="text-accent font-medium tracking-wide uppercase text-sm">
-                  Analista de TI | Arquiteto de Software | Analista de Cloud
-                </p>
-                <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center">
-                  <SparklesText sparkleCount={20}>
-                    <img 
-                      src={logoImage} 
-                      alt="Bruno Logo" 
-                      className="w-24 h-24 lg:w-40 lg:h-40 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72 object-contain animate-pulse hover:scale-110 hover:rotate-6 transition-all duration-500 drop-shadow-lg hover:drop-shadow-2xl cursor-pointer"
-                    />
-                  </SparklesText>
-                </h1>
-              </div>
+         {/* Left Side - Text Content */}
+<div className="space-y-8 relative z-10">
+  <div className="space-y-6">
+    <div className="space-y-4">
+      {/* Roles / Funções */}
+      <div className="flex flex-wrap items-center gap-3 text-[0.7rem] sm:text-xs md:text-sm font-medium uppercase tracking-[0.25em]">
+        {[
+          "Analista de TI",
+          "Arquiteto de Software",
+          "Analista de Cloud",
+        ].map((role) => (
+          <span
+            key={role}
+            className="
+              text-green-400 relative
+              after:content-[''] after:absolute after:-bottom-0.5 after:left-0
+              after:w-full after:h-[1px] after:bg-green-400/40 after:rounded-full
+              hover:text-green-300 hover:after:bg-green-300/70
+              transition-all duration-300
+            "
+          >
+            {role}
+          </span>
+        ))}
+      </div>
+
+      {/* Logo / Hero Title */}
+      <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center lg:justify-start">
+        <SparklesText sparkleCount={20}>
+          <img
+            src={logoImage}
+            alt="Bruno Logo"
+            className="
+              w-24 h-24 lg:w-40 lg:h-40 xl:w-56 xl:h-56 2xl:w-72 2xl:h-72
+              object-contain
+              animate-pulse
+              hover:scale-110 hover:rotate-6
+              transition-all duration-500
+              drop-shadow-lg hover:drop-shadow-2xl
+              cursor-pointer
+            "
+          />
+        </SparklesText>
+      </h1>
+    </div>
+  </div>
+</div>
+
 
               <div className="space-y-4">
                 <div className="h-12 flex items-center">
