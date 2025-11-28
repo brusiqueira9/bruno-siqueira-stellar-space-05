@@ -12,13 +12,32 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div className="absolute inset-0 opacity-80 pointer-events-none">
+        <div className="absolute -left-10 top-10 w-64 h-64 bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-3xl" />
+        <div className="absolute right-0 bottom-0 w-80 h-80 bg-gradient-to-tr from-accent/20 via-primary/10 to-transparent blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,176,255,0.08),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(99,102,241,0.08),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(34,197,94,0.08),transparent_30%)]" />
+      </div>
+
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Text Content */}
           <div className="space-y-10 lg:space-y-12 relative z-10">
             {/* Roles + Logo */}
             <div className="space-y-6">
+              <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-primary/80">
+                <span className="surface-card px-4 py-2 rounded-full border border-primary/20 shadow-inner shadow-primary/20">
+                  Disponível para projetos estratégicos
+                </span>
+                <span className="flex items-center gap-2 surface-card px-4 py-2 rounded-full border border-accent/20">
+                  <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
+                  Resposta em menos de 24h
+                </span>
+              </div>
+
               <div className="flex flex-wrap items-center gap-3 text-[0.7rem] sm:text-xs md:text-sm font-medium uppercase tracking-[0.25em]">
                 {['Analista de TI', 'Arquiteto de Software', 'Analista de Cloud'].map((role) => (
                   <span
@@ -67,6 +86,23 @@ const Hero = () => {
                 Especialista em soluções escaláveis, infraestrutura de TI e modernização de sistemas.
                 Transformo conhecimento teórico em aplicações práticas que geram valor real para o negócio.
               </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
+                {[
+                  { label: 'Anos de experiência', value: '12+' },
+                  { label: 'Projetos entregues', value: '45+' },
+                  { label: 'Clientes satisfeitos', value: '98%' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="surface-card p-4 rounded-xl border border-primary/10 shadow-sm shadow-primary/10"
+                  >
+                    <div className="text-2xl font-semibold text-primary">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground uppercase tracking-[0.2em] mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Botões */}
@@ -88,6 +124,27 @@ const Hero = () => {
               >
                 Entrar em Contato
               </button>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
+              <div className="surface-card p-4 rounded-xl border border-primary/10 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-semibold">
+                  PT-BR
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Atuação remota Brasil &amp; Global</p>
+                  <p className="text-xs text-muted-foreground/80">Horários flexíveis para squads distribuídos</p>
+                </div>
+              </div>
+              <div className="surface-card p-4 rounded-xl border border-accent/10 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent font-semibold">
+                  SLA
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Onboarding e discovery guiados</p>
+                  <p className="text-xs text-muted-foreground/80">Workshops técnicos + roadmaps acionáveis</p>
+                </div>
+              </div>
             </div>
           </div>
 
