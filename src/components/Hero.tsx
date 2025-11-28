@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="space-y-6">
               <div className="space-y-2">
                 <p className="text-accent font-medium tracking-wide uppercase text-sm">
-                  Analista de TI | Arquiteto de Software em Formação
+                  Analista de TI | Arquiteto de Software | Analista de Cloud
                 </p>
                 <h1 className="text-5xl lg:text-7xl font-bold font-inter leading-tight flex items-center justify-center">
                   <SparklesText sparkleCount={20}>
